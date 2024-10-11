@@ -16,6 +16,8 @@ jobs:
         uses: advanced-security/ghas-to-csv@v3
         env:
           GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+          GITHUB_REPORT_SCOPE: "organization"
+          SCOPE_NAME: "ctcampbellcom"
       - name: Upload CSV
         uses: actions/upload-artifact@v3
         with:
